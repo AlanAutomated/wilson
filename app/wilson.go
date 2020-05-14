@@ -37,7 +37,7 @@ func main() {
 	// Enter the handler to "handle" RADIUS requests
 	handler := func(w radius.ResponseWriter, r *radius.Request) {
 	
-		// Check the channel for an updated config before serving the request in a non-blocking fasion
+		// Check the channel for an updated config before serving the request in a non-blocking fashion
 		select {
 			case config = <- channel: 
 				log.Println(wilson.NoticeConfigUpdated)
