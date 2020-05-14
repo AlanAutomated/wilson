@@ -35,7 +35,7 @@ When executed for the first time, wilson expects to load its configuration from 
 ./wilson -url https://my-lb-site.internal.org/wilson.json
 ```
 
-For implementations on Arista EOS, consider using an [event-handler](https://www.arista.com/en/um-eos/eos-section-3-9-command-line-interface-commands#ww1124606) or event perhaps [rc.eos](https://www.arista.com/assets/data/pdf/Whitepapers/Arista_EOS_parser.pdf).
+For implementations on Arista EOS, consider using an [event-handler](https://www.arista.com/en/um-eos/eos-section-3-9-command-line-interface-commands#ww1124606) or even perhaps [rc.eos](https://www.arista.com/assets/data/pdf/Whitepapers/Arista_EOS_parser.pdf).
 
 
 Wilson expects the configuration to conform to a known [JSON schema](https://github.com/autoalan/wilson/blob/35d32639d00e05aeb7c1a301a6d2e96112d53034/schema.go#L23-L101). Below is an example of a configuration file.
