@@ -2,7 +2,7 @@
 
 # wilson
 
-<img src="C:\Users\Alan\Desktop\wilson.jpg" alt="wilson" align="right" style="zoom:10%;" />A Go (golang) [dot1x](https://github.com/layeh/radius) server that runs locally on network switches as secondary authentication server. When a switch becomes stranded from its primary dot1x server, wilson will authenticate endpoints by [OUI](https://en.wikipedia.org/wiki/Organizationally_unique_identifier) using a flexible policy. Wilson was developed to provide supplemental `policy-map type control` support for an [Arista EOS](https://www.arista.com/en/products/eos) campus healthcare environment with colorless ports and a high up-time requirement.
+<img src="https://github.com/autoalan/wilson/raw/master/images/wilson.jpg" alt="wilson" align="right" style="zoom:10%;" />A Go (golang) [dot1x](https://github.com/layeh/radius) server that runs locally on network switches as secondary authentication server. When a switch becomes stranded from its primary dot1x server, wilson will authenticate endpoints by [OUI](https://en.wikipedia.org/wiki/Organizationally_unique_identifier) using a flexible policy. Wilson was developed to provide supplemental `policy-map type control` support for an [Arista EOS](https://www.arista.com/en/products/eos) campus healthcare environment with colorless ports and a high up-time requirement.
 
 
 
