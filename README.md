@@ -60,7 +60,7 @@ Wilson expects the configuration to conform to a known [JSON schema](https://git
    			"radiusCode": 2
    		},
    		{
-   			"comment": "Ignore all other requests",
+   			"comment": "Ignore all other requestst; the default policy is the last policy",
    			"clientOui": "0000.00",
    			"clientVlanvlan": 0,
    			"radiusCode": 0
