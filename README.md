@@ -95,5 +95,5 @@ MPL 2.0
 
 Alan Haynes (alan@networkautomation.engineer). 
 
-Huge thanks to Tim Cooper for the superb radius implementation.
+Huge thanks to [Tim Cooper](mailto:tim.cooper@layeh.com) for the [superb radius implementation](https://github.com/layeh/radius).
 
