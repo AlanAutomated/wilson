@@ -79,7 +79,7 @@ Wilson expects the configuration to conform to a known [JSON schema](https://git
 | serverBinding | The server binding used for requests. Typically this will be localhost for obvious reasons. |
 | serverSecret  | The RADIUS secret to authenticate the NAS client.            |
 | comment       | Ignored by wilson. This is for humans.                       |
-| clientOui     | A 24-bit hexadecimal string representing the OUI of a MAC address. Delimiters (:, -, .) are ignored. |
+| clientOui     | A 24-bit hexadecimal string representing the OUI of a MAC address. Delimiters (":", "-", ".") are ignored. |
 | clientVlan    | The VLAN to be assigned to the client on access-accept.      |
 | radiusCode    | [Standard RADIUS codes supported](https://github.com/layeh/radius/blob/3e43fd4ead922ac65515918994c1e7942d1f0013/code.go#L11-L27) by the underlying radius library. A typically deployment would leverage 2 (Accept), 3 (Reject) and 0 (Ignore or discard the request). |
 
