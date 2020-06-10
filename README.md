@@ -21,7 +21,7 @@ go get -u github.com/autoalan/wilson
 Wilson will run once compiled without modification on most platforms. Simply clone this repository and compile wilson.go in the apps folder.  For Arista EOS switches, use the 386 architecture.  
 
 ```
-# GOARCH=386 go build apps/wilson.go
+# GOARCH=386 go build app/wilson.go
 ```
 
 
