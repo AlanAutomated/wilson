@@ -116,7 +116,7 @@ func Config(url string) (Configuration) {
 		fromFile = true
 	}
 
-	// Nirst check for an error validating the configuration
+	// First check for an error validating the configuration
 	valid, err := validateConfig(encodedConfig, Schema)
 	if err != nil {
 		log.Fatal(ErrConfigNotValid)
