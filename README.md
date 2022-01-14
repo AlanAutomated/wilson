@@ -93,7 +93,7 @@ MPL 2.0
 
 ## Author
 
-Alan Haynes (alan@networkautomation.engineer). 
+Alan Haynes (alan@nre.dev). 
 
 Huge thanks to [Tim Cooper](mailto:tim.cooper@layeh.com) for the [superb radius implementation](https://github.com/layeh/radius).
 
