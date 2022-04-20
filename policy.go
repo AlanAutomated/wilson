@@ -1,15 +1,13 @@
 package wilson
 
-
-import(
+import (
 	"log"
 	"regexp"
 	"strings"
 )
 
-
 // Return the first 24 bits of a MAC address
-func returnOUI(mac string) (string) {
+func returnOUI(mac string) string {
 
 	// A simple way to account for the various MAC patterns
 	expression := regexp.MustCompile("[^a-fA-F0-9]+")
@@ -26,7 +24,6 @@ func returnOUI(mac string) (string) {
 	return oui
 }
 
-
 // Return the first matching policy code and VLAN
 func Policy(oui string, config Configuration) (int, int) {
 
@@ -37,7 +34,6 @@ func Policy(oui string, config Configuration) (int, int) {
 		log.Printf(WarnPolicyDiscardRequest, oui)
 		return 0, 0
 	}
-
 
 	// Loop through the policies for a match
 	for _, v := range config.Policies {

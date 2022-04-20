@@ -1,23 +1,19 @@
 package wilson
 
-
 type Configuration struct {
-
-	ConfigFile		string		`json:"configFile`
-	ConfigRefresh	float64		`json:"configRefresh"`
-	ConfigUrl		string		`json:"configUrl"`
-	ServerBinding	string		`json:"serverBinding"`
-	ServerSecret	string		`json:"serverSecret"`
-	Policies		[]Pol		`json:"policies"`
+	ConfigFile    string  `json:"configFile"`
+	ConfigRefresh float64 `json:"configRefresh"`
+	ConfigUrl     string  `json:"configUrl"`
+	ServerBinding string  `json:"serverBinding"`
+	ServerSecret  string  `json:"serverSecret"`
+	Policies      []Pol   `json:"policies"`
 }
-
 
 type Pol struct {
-	ClientOui		string	`json:"clientOui"`
-	ClientVlan		int		`json:"clientVlan"`
-	RadiusCode		int		`json:"radiusCode"`
+	ClientOui  string `json:"clientOui"`
+	ClientVlan int    `json:"clientVlan"`
+	RadiusCode int    `json:"radiusCode"`
 }
-
 
 const Schema string = `
 {
@@ -53,7 +49,7 @@ const Schema string = `
 			"$id": "#/properties/serverBinding",
 			"type": "string",
 			"default": ""
-		},		
+		},
 		"serverSecret": {
 			"$id": "#/properties/serverSecret",
 			"type": "string",
