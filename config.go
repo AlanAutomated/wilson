@@ -1,7 +1,6 @@
 package wilson
 
-
-import(	
+import (
 	"encoding/json"
 	"io/ioutil"
 	"log"
@@ -10,7 +9,6 @@ import(
 
 	"github.com/xeipuuv/gojsonschema"
 )
-
 
 // Convert a JSON configuration to a Configuration struct
 func decodeConfig(encodedConfig []byte) (Configuration, error) {
@@ -24,10 +22,9 @@ func decodeConfig(encodedConfig []byte) (Configuration, error) {
 	return config, nil
 }
 
-
 // Download a JSON configuration and return the body
 func downloadConfig(url string) ([]byte, error) {
-	
+
 	result, err := http.Get(url)
 	if err != nil {
 		return nil, err
@@ -47,7 +44,6 @@ func downloadConfig(url string) ([]byte, error) {
 
 }
 
-
 // A generic function to read a local configuration file
 func readFile(path string) ([]byte, error) {
 
@@ -58,7 +54,6 @@ func readFile(path string) ([]byte, error) {
 
 	return config, nil
 }
-
 
 // Ensure the JSON confinguration conforms to the known schema
 func validateConfig(config []byte, schema string) (bool, error) {
@@ -75,9 +70,8 @@ func validateConfig(config []byte, schema string) (bool, error) {
 	return result.Valid(), nil
 }
 
-
 // A generic function to write a local configuration file
-func writeFile(config []byte, path string) (error) {
+func writeFile(config []byte, path string) error {
 
 	err := ioutil.WriteFile(path, config, 0644)
 	if err != nil {
@@ -87,7 +81,6 @@ func writeFile(config []byte, path string) (error) {
 	return nil
 }
 
-
 // Refresh the configuration on a given interval using a go routine
 func RefreshConfig(seconds float64, url string) Configuration {
 	time.Sleep(time.Duration(seconds) * time.Second)
@@ -96,23 +89,23 @@ func RefreshConfig(seconds float64, url string) Configuration {
 	return config
 }
 
-// A public function to perform most of the lifting 
-func Config(url string) (Configuration) {
+// A public function to perform most of the lifting
+func Config(url string) Configuration {
 
 	// Track whether a configuration has been read from disk
-	fromFile := false 
-	
+	fromFile := false
+
 	encodedConfig, err := downloadConfig(url)
 	if err != nil {
-		
+
 		// Read from the default configuration path since we don't have a config
 		// to tell us where to look
 		encodedConfig, err = readFile(".wilson")
-	
+
 		if err != nil {
 			log.Fatal(ErrConfigNotFound)
-		}	
-	
+		}
+
 		fromFile = true
 	}
 
@@ -134,7 +127,7 @@ func Config(url string) (Configuration) {
 
 	// If the file was downloaded from a URL, write it to desk for safe keeping
 	if !fromFile {
-		
+
 		path := config.ConfigFile
 
 		err := writeFile(encodedConfig, path)
@@ -143,6 +136,6 @@ func Config(url string) (Configuration) {
 		}
 	}
 
-	// Finally, return the config and hope we accounted for all known errors	
+	// Finally, return the config and hope we accounted for all known errors
 	return config
 }
