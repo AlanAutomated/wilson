@@ -57,7 +57,7 @@ Wilson expects the configuration to conform to a known [JSON schema](https://git
    			"comment": "Issue an access-reject for unauthorized TP-Link endpoints",
    			"clientOui": "d8-07-b6",
    			"clientVlan": 0,
-   			"radiusCode": 2
+   			"radiusCode": 3
    		},
    		{
    			"comment": "Ignore all other requestst; the default policy is the last policy",
