@@ -125,7 +125,7 @@ func Config(url string) Configuration {
 		log.Fatal(ErrConfigDecodeFailed)
 	}
 
-	// If the file was downloaded from a URL, write it to desk for safe keeping
+	// If the file was downloaded from a URL, write it to disk for safe keeping
 	if !fromFile {
 
 		path := config.ConfigFile
